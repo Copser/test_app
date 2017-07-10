@@ -1,0 +1,17 @@
+{% extends "site_base.html" %}
+
+
+{% block content %}
+
+<div class="jumbotron text-center">
+    <h1>Alpha Auth</h1>
+    <p>
+        {% if user.is_authenticated %}
+          <a id="logout" class="btn btn-primary btn-lg" href="/accounts/logout/">Logout</a>
+        {% else %}
+          <a class="btn btn-primary btn-lg" href="/accounts/login/">Login</a>
+        {% endif %}
+    </p>
+</div>
+
+{% endblock %}
